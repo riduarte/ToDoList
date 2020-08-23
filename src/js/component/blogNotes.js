@@ -6,7 +6,7 @@ export function BlogNotes() {
 	const [item, setItem] = useState(0);
 
 	const addTask = e => {
-		if (e.key === "Enter") {
+		if (e.key === "Enter" && e.target.value != "") {
 			setTitle([...title, e.target.value]);
 			setItem(item + 1);
 			e.target.value = "";
